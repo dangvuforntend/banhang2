@@ -1,0 +1,126 @@
+/* Menu bên trái */
+.container {
+  display: flex;
+}
+.menu-container {
+  flex: 2;
+  overflow-y: auto;
+  padding: 10px; /* Giảm khoảng padding xung quanh */
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tạo các cột nhỏ hơn */
+  gap: 15px; /* Giảm khoảng cách giữa các sản phẩm */
+}
+
+.item {
+  width: 100%; /* Đảm bảo các sản phẩm chiếm hết chiều rộng trong cột */
+  background-color: #fefefe;
+  padding: 8px; /* Giảm padding bên trong */
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: auto; /* Đảm bảo chiều cao phù hợp */
+}
+
+.item img {
+  width: 100%;
+  height: 120px; /* Giảm kích thước ảnh */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item h3 {
+  font-size: 14px; /* Giảm kích thước font tiêu đề */
+  margin: 8px 0 4px;
+}
+
+.item p {
+  font-size: 12px; /* Giảm kích thước font mô tả */
+  margin: 4px 0;
+}
+
+.quantity-control {
+  margin: 5px 0; /* Giảm khoảng cách giữa các phần tử */
+}
+
+button {
+  padding: 6px 10px; /* Giảm padding của nút */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px; /* Giảm kích thước font của nút */
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Giỏ hàng bên phải */
+.cart {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* khoảng cách nhỏ lại */
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-img {
+  width: 30px; /* nhỏ hơn */
+  height: 30px; /* nhỏ hơn */
+  object-fit: cover;
+  border-radius: 6px; /* bo tròn nhẹ */
+  border: 1px solid #ccc;
+}
+
+.cart-name {
+  font-weight: bold;
+  font-size: 15px;
+  min-width: 100px;
+}
+
+.cart-price {
+  color: #28a745;
+  font-size: 14px;
+  min-width: 70px;
+}
+
+.cart-quantity {
+  font-size: 13px;
+  color: #555;
+}
+
+.cart-total {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #28a745;
+}
+
+.cart-total h3 {
+  color: #333;
+  font-size: 18px;
+  text-align: right;
+}
+
+
+
